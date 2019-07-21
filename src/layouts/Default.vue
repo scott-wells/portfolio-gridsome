@@ -12,7 +12,7 @@
         <g-link class="nav__link" to="/contact">Contact</g-link>
       </nav>
     </header> <!-- end of header -->
-    <slot/>
+    <slot/> <!-- this is where the other content is inserted -->
     <footer>
       <div class="footer-links">
         <p class="bold-it d-block mb-1">Scott Wells</p>
