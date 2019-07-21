@@ -62,7 +62,8 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+nav {
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -93,7 +94,7 @@ p {
 
 .navbar-nav {
 	color: black;
-	font-weight: 200;
+	font-weight: 300;
 }
 
 /* FOOTER */
