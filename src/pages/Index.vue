@@ -1,20 +1,12 @@
 <template>
   <Layout>
-    
     <Masthead />
-
     <GraphicBreak />
-
     <Projects />
-
     <GraphicBreak />
-   
     <About />
-
     <Contact />
-
   </Layout>
-
 </template>
 
 <script>
