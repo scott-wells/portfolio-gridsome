@@ -1,18 +1,37 @@
 <!-- This is the default templated layout that will wrap every page. Contains header (logo, nav) and footer. -->
 <template> 
   <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">SW</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/projects">Projects</g-link>
-        <g-link class="nav__link" to="/about">About</g-link>
-        <g-link class="nav__link" to="/contact">Contact</g-link>
-      </nav>
-    </header> <!-- end of header -->
+    <!--Navigation-->
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top font-weight-bold">
+				<a class="navbar-brand" href="#top">SW</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<i class="fas fa-bars"></i>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="#top">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#work">Work</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#design">Design</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#about">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#contact">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header> <!-- end of header -->
+
     <slot/> <!-- this is where the other content is inserted -->
+
     <footer>
       <div class="footer-links">
         <p class="bold-it d-block mb-1">Scott Wells</p>
@@ -36,12 +55,6 @@
 </template>
 
 <style>
-.layout {
-  max-width: 100vw;
-  margin: 0 auto;
-  padding: 0 10px;
-}
-
 /* FONTS */
 body,
 h1,
@@ -66,20 +79,52 @@ p {
 	font-size: 1rem;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 50px;
-}
 
-.nav {
+/* HEADER */
+.navbar {
 	color: black;
 	background: white;
 }
 
-.nav__link {
-  font-weight: 300;
-  margin-left: 20px;
+.navbar .navbar-toggler {
+	color: rgba(0,0,0,1);
+	border: rgba(0,0,0,0);
 }
+
+.navbar-nav {
+	color: black;
+	font-weight: 200;
+}
+
+/* FOOTER */
+footer {
+	background-color: #2d2d2d;
+	min-height: 30vh;
+}
+
+footer div div div p {
+	color: white;
+	font-size: 1.1rem;
+}
+
+footer div div div a,
+footer div div div a:hover {
+	color: white;
+	font-size: .9rem;
+	font-weight: 300;
+}
+
+footer div div div.social-icons a i {
+	font-size: 30px;
+}
+
+footer div div div.copyright h1 {
+	color: white;
+	font-size: 1.4rem;
+}
+
+footer div div div.copyright p {
+	font-size: .8rem;
+}
+
 </style>
